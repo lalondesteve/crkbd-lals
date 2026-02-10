@@ -1,4 +1,6 @@
 vial-qmk/
+build/
+_old/
 # Prerequisites
 *.d
 
