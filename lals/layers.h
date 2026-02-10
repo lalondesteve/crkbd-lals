@@ -12,6 +12,7 @@ enum layers {
 };
 
 #define _DEF_COLOR    0,    44, 255 // blue
+#define _DEF_COLOR_HSV 162, 255, 255 //                                    
 #define _FKEYS_COLOR  255,  30, 126 // magenta
 #define _SUDOKU_COLOR 255,  60,  15 // orange
 #define _NUM_COLOR    0,   255, 126 // green

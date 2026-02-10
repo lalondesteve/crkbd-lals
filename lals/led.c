@@ -1,4 +1,3 @@
-#pragma once
 #include "quantum.h"
 #include "layers.h"
 
@@ -8,7 +7,7 @@ bool update_capslock_led_state(bool caps_state){
     rgb_matrix_set_color_all(_CAPS_COLOR);
     return true;
   }
-  return false
+  return false;
 } 
 
 void caps_word_set_user(bool active){
@@ -40,13 +39,23 @@ bool rgb_matrix_indicators_user(void){
     case _NUM:
     case _CHAR:
     default:
-      break;
+      return false;
   }
   return false;
 }
 
-void keyboard_post_init_user(void){
+void my_default_color(void){
+  rgb_matrix_enable();
   rgb_matrix_mode(RGB_MATRIX_SOLID_COLOR);
-  rgb_matrix_set_color_all(_DEF_COLOR)
+  rgb_matrix_set_color_all(_DEF_COLOR);
+}
+
+void keyboard_post_init_user(void){
+  my_default_color();
+}
+
+void eeconfing_init_user(void){
+  my_default_color();
+  rgb_matrix_sethsv(_DEF_COLOR_HSV);
 }
 

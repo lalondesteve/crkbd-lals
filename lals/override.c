@@ -1,4 +1,3 @@
-#pragma once
 #include "quantum.h"
 
 const key_override_t shift_allspace_underscore = ko_make_basic(MOD_MASK_SHIFT, HYPR_T(KC_SPC), KC_UNDS);
