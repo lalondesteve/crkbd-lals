@@ -29,36 +29,34 @@ bool rgb_matrix_indicators_user(void){
     return false;
   }
 
-  switch (get_highest_layer(layer_state)){
-    case _FKEYS:
-      rgb_matrix_set_color_all(_FKEYS_COLOR);
-      break;
-    case _NUMPAD:
-      rgb_matrix_set_color_all(_NUM_COLOR);
-      break;
-    case _SUDOKU:
-      rgb_matrix_set_color_all(_SUDOKU_COLOR);
-      break; 
-    case _NUM:
-    case _CHAR:
-    default:
-      return false;
+  uint8_t current_layer = get_highest_layer(layer_state);
+  if (current_layer > 0){
+    uint8_t h, s, v;
+    vial_get_user_setting_hsv(current_layer, &h, &s, &v);
+
+    HSV hsv = {h,s,v};
+    RGB rgb = hsv_to_rgb(hsv);
+    rgb_matrix_set_color_all(rgb.r, rgb.g, rgb.b);
   }
+
+
   return false;
 }
 
-void my_default_color(void){
-  rgb_matrix_enable();
-  rgb_matrix_mode(RGB_MATRIX_SOLID_COLOR);
-  rgb_matrix_set_color_all(_DEF_COLOR);
-}
-
-void keyboard_post_init_user(void){
-  my_default_color();
-}
-
 void eeconfig_init_user(void){
-  my_default_color();
-  rgb_matrix_sethsv(_DEF_COLOR_HSV);
+  vial_get_user_setting_hsv(id_layer0, _DEF_COLOR_HSV);
+  vial_get_user_setting_hsv(id_layer1, _DEF_COLOR_HSV);
+  vial_get_user_setting_hsv(id_layer2, _DEF_COLOR_HSV);
+  vial_get_user_setting_hsv(id_layer3, _MAG_COLOR_HSV);
+  vial_get_user_setting_hsv(id_layer4, _CYAN_COLOR_HSV);
+  vial_get_user_setting_hsv(id_layer5, _DEF_COLOR_HSV);
+  vial_get_user_setting_hsv(id_layer6, _CTO_COLOR_HSV);
+  vial_get_user_setting_hsv(id_layer7, _DEF_COLOR_HSV);
+  vial_get_user_setting_hsv(id_layer8, _DEF_COLOR_HSV);
+  vial_get_user_setting_hsv(id_layer9, _DEF_COLOR_HSV);
+  vial_get_user_setting_hsv(id_caps, _ALT_CAPS_HSV);
 }
 
+void vial_post_config_save_user(void){
+  rgb_matrix_indicators_user()
+}

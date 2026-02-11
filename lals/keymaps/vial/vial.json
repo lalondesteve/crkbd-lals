@@ -7,6 +7,90 @@
     "cols": 7
   },
   "lighting": "vialrgb",
+  "menus": [
+    {
+      "label": "Layer Colors",
+      "content": [
+        {
+          "label": "Layer 0",
+          "type": "color",
+          "content": [
+            "id_layer0_color"
+          ]
+        },
+        {
+          "label": "Layer 1",
+          "type": "color",
+          "content": [
+            "id_layer1_color"
+          ]
+        },
+        {
+          "label": "Layer 2",
+          "type": "color",
+          "content": [
+            "id_layer2_color"
+          ]
+        },
+        {
+          "label": "Layer 3",
+          "type": "color",
+          "content": [
+            "id_layer3_color"
+          ]
+        },
+        {
+          "label": "Layer 4",
+          "type": "color",
+          "content": [
+            "id_layer4_color"
+          ]
+        },
+        {
+          "label": "Layer 5",
+          "type": "color",
+          "content": [
+            "id_layer5_color"
+          ]
+        },
+        {
+          "label": "Layer 6",
+          "type": "color",
+          "content": [
+            "id_layer6_color"
+          ]
+        },
+        {
+          "label": "Layer 7",
+          "type": "color",
+          "content": [
+            "id_layer7_color"
+          ]
+        },
+        {
+          "label": "Layer 8",
+          "type": "color",
+          "content": [
+            "id_layer8_color"
+          ]
+        },
+        {
+          "label": "Layer 9",
+          "type": "color",
+          "content": [
+            "id_layer9_color"
+          ]
+        },
+        {
+          "label": "Caps Lock",
+          "type": "color",
+          "content": [
+            "id_caps_color"
+          ]
+        }
+      ]
+    }
+  ],
   "layouts": {
     "labels": [
       [
