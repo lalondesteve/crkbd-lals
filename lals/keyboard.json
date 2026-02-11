@@ -37,7 +37,7 @@
   },
   "ws2812": {
     "driver": "vendor",
-    "pin": "GP20"
+    "pin": "GP10"
   },
   "matrix_pins": {
     "direct": [
