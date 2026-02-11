@@ -6,13 +6,14 @@ D := $(shell pwd)
 clean:
 	rm -rf vial-qmk/keyboards/${F}
 	cd vial-qmk; qmk clean
+	rm -rf build/*
 
 init:
 	make clean
 	git submodule update --remote
 	git submodule update --init --recursive
 	ln -s ${D}/${F} vial-qmk/keyboards/${F}
-	rm -rf build/*
+	mkdir build
 
 compile:
 	cd vial-qmk; qmk compile -j 4 -kb ${F} -km vial
