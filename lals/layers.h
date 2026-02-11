@@ -11,8 +11,8 @@ enum layers {
   id_layer7, 
   id_layer8, 
   id_layer9, 
-  id_caps,
-}
+  id_caps
+};
 
 #define _DEF_COLOR_HSV 162, 255, 255 //                                    
 #define _DEF_COLOR    0,    44, 255 // blue

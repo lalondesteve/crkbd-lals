@@ -14,7 +14,7 @@ void caps_word_set_user(bool active){
   if (active){
     update_capslock_led_state(true);
   } else {
-    update_capslock_led_state(true);
+    update_capslock_led_state(false);
   }
 }
 
@@ -58,5 +58,5 @@ void eeconfig_init_user(void){
 }
 
 void vial_post_config_save_user(void){
-  rgb_matrix_indicators_user()
+  rgb_matrix_indicators_user();
 }
