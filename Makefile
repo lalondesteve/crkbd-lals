@@ -6,7 +6,7 @@ D := $(shell pwd)
 clean:
 	rm -rf vial-qmk/keyboards/${F}
 	cd vial-qmk; qmk clean
-	rm -rf build/*
+	rm -rf build
 
 init:
 	make clean

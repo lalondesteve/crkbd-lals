@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-
-cd ${pwd}/vial-qmk/
-qmk compile -kb=lals -km=lals
-cp ${pwd}/vial-qmk/.build/lals_lals.uf2 ${pwd}/build/lals.uf2
