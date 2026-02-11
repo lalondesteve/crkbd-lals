@@ -15,6 +15,6 @@ init:
 	rm -rf build/*
 
 compile:
-	cd vial-qmk; qmk compile -j 4 -kb ${F} -km default
+	cd vial-qmk; qmk compile -j 4 -kb ${F} -km vial
 	cp vial-qmk/.build/${F}* build/
 

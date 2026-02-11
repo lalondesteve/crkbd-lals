@@ -15,12 +15,8 @@ void caps_word_set_user(bool active){
 }
 
 bool led_update_user(led_t led_state){
-  bool res = led_update_kb(led_state);
-  if (res){
-    led_update_ports(led_state);
-  }
   update_capslock_led_state(led_state.caps_lock);
-  return res;
+  return true;
 }
 
 bool rgb_matrix_indicators_user(void){
@@ -35,6 +31,9 @@ bool rgb_matrix_indicators_user(void){
       break;
     case _NUMPAD:
       rgb_matrix_set_color_all(_NUM_COLOR);
+      break;
+    case _SUDOKU:
+      rgb_matrix_set_color_all(_SUDOKU_COLOR);
       break;
     case _NUM:
     case _CHAR:
@@ -54,7 +53,7 @@ void keyboard_post_init_user(void){
   my_default_color();
 }
 
-void eeconfing_init_user(void){
+void eeconfig_init_user(void){
   my_default_color();
   rgb_matrix_sethsv(_DEF_COLOR_HSV);
 }
