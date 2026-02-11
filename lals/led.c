@@ -1,4 +1,5 @@
 #include "quantum.h"
+#include "vialrgb.h"
 #include "layers.h"
 
 
@@ -32,7 +33,7 @@ bool rgb_matrix_indicators_user(void){
   uint8_t current_layer = get_highest_layer(layer_state);
   if (current_layer > 0){
     uint8_t h, s, v;
-    vial_get_user_setting_hsv(current_layer, &h, &s, &v);
+    vialrgb_get_value(current_layer, &h, &s, &v);
 
     HSV hsv = {h,s,v};
     RGB rgb = hsv_to_rgb(hsv);
@@ -44,17 +45,17 @@ bool rgb_matrix_indicators_user(void){
 }
 
 void eeconfig_init_user(void){
-  vial_set_user_setting_hsv(id_layer0, _DEF_COLOR_HSV);
-  vial_set_user_setting_hsv(id_layer1, _DEF_COLOR_HSV);
-  vial_set_user_setting_hsv(id_layer2, _DEF_COLOR_HSV);
-  vial_set_user_setting_hsv(id_layer3, _MAG_COLOR_HSV);
-  vial_set_user_setting_hsv(id_layer4, _CYAN_COLOR_HSV);
-  vial_set_user_setting_hsv(id_layer5, _DEF_COLOR_HSV);
-  vial_set_user_setting_hsv(id_layer6, _CTO_COLOR_HSV);
-  vial_set_user_setting_hsv(id_layer7, _DEF_COLOR_HSV);
-  vial_set_user_setting_hsv(id_layer8, _DEF_COLOR_HSV);
-  vial_set_user_setting_hsv(id_layer9, _DEF_COLOR_HSV);
-  vial_set_user_setting_hsv(id_caps, _ALT_CAPS_HSV);
+  vialrgb_set_value(id_layer0, _DEF_COLOR_HSV);
+  vialrgb_set_value(id_layer1, _DEF_COLOR_HSV);
+  vialrgb_set_value(id_layer2, _DEF_COLOR_HSV);
+  vialrgb_set_value(id_layer3, _MAG_COLOR_HSV);
+  vialrgb_set_value(id_layer4, _CYAN_COLOR_HSV);
+  vialrgb_set_value(id_layer5, _DEF_COLOR_HSV);
+  vialrgb_set_value(id_layer6, _CTO_COLOR_HSV);
+  vialrgb_set_value(id_layer7, _DEF_COLOR_HSV);
+  vialrgb_set_value(id_layer8, _DEF_COLOR_HSV);
+  vialrgb_set_value(id_layer9, _DEF_COLOR_HSV);
+  vialrgb_set_value(id_caps, _ALT_CAPS_HSV);
 }
 
 void vial_post_config_save_user(void){
