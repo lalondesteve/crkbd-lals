@@ -44,17 +44,17 @@ bool rgb_matrix_indicators_user(void){
 }
 
 void eeconfig_init_user(void){
-  vial_get_user_setting_hsv(id_layer0, _DEF_COLOR_HSV);
-  vial_get_user_setting_hsv(id_layer1, _DEF_COLOR_HSV);
-  vial_get_user_setting_hsv(id_layer2, _DEF_COLOR_HSV);
-  vial_get_user_setting_hsv(id_layer3, _MAG_COLOR_HSV);
-  vial_get_user_setting_hsv(id_layer4, _CYAN_COLOR_HSV);
-  vial_get_user_setting_hsv(id_layer5, _DEF_COLOR_HSV);
-  vial_get_user_setting_hsv(id_layer6, _CTO_COLOR_HSV);
-  vial_get_user_setting_hsv(id_layer7, _DEF_COLOR_HSV);
-  vial_get_user_setting_hsv(id_layer8, _DEF_COLOR_HSV);
-  vial_get_user_setting_hsv(id_layer9, _DEF_COLOR_HSV);
-  vial_get_user_setting_hsv(id_caps, _ALT_CAPS_HSV);
+  vial_set_user_setting_hsv(id_layer0, _DEF_COLOR_HSV);
+  vial_set_user_setting_hsv(id_layer1, _DEF_COLOR_HSV);
+  vial_set_user_setting_hsv(id_layer2, _DEF_COLOR_HSV);
+  vial_set_user_setting_hsv(id_layer3, _MAG_COLOR_HSV);
+  vial_set_user_setting_hsv(id_layer4, _CYAN_COLOR_HSV);
+  vial_set_user_setting_hsv(id_layer5, _DEF_COLOR_HSV);
+  vial_set_user_setting_hsv(id_layer6, _CTO_COLOR_HSV);
+  vial_set_user_setting_hsv(id_layer7, _DEF_COLOR_HSV);
+  vial_set_user_setting_hsv(id_layer8, _DEF_COLOR_HSV);
+  vial_set_user_setting_hsv(id_layer9, _DEF_COLOR_HSV);
+  vial_set_user_setting_hsv(id_caps, _ALT_CAPS_HSV);
 }
 
 void vial_post_config_save_user(void){
