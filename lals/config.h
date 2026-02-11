@@ -1,5 +1,6 @@
 #pragma once
 
+#define SPLIT_TRANSACTION_IDS_USER USER_SYNC_CAPS_WORD
 #define USB_VBUS_PIN GP13
 /* RP2040- and hardware-specific config */
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET
