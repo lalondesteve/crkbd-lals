@@ -11,7 +11,11 @@ bool update_capslock_led_state(bool caps_state){
 } 
 
 void caps_word_set_user(bool active){
-  update_capslock_led_state(active);
+  if (active){
+    update_capslock_led_state(true);
+  } else {
+    update_capslock_led_state(true);
+  }
 }
 
 bool led_update_user(led_t led_state){
@@ -34,7 +38,7 @@ bool rgb_matrix_indicators_user(void){
       break;
     case _SUDOKU:
       rgb_matrix_set_color_all(_SUDOKU_COLOR);
-      break;
+      break; 
     case _NUM:
     case _CHAR:
     default:
