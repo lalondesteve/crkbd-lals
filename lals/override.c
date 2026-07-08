@@ -1,11 +1,8 @@
 #include "override.h"
-#include "keyoverride.h"
+#include "process_key_override.h"
 #include "quantum.h"
 
-const key_override_t shift_allspace_underscore =
-    ko_make_basic(MOD_MASK_SHIFT, HYPR_T(KC_SPC), KC_UNDS);
 const key_override_t shift_space_underscore =
-    ko_make_basic(MOD_MASK_SHIFT, KC_SPC, KC_UNDS);
+    ko_make_with_layers_and_negmods(MOD_MASK_SHIFT, LT2(KC_SPC), KC_UNDS, ~0, MOD_MASK_ALT | MOD_MASK_GUI);
 
-const key_override_t *key_overrides[] = {&shift_space_underscore,
-                                         &shift_allspace_underscore, NULL};
+const key_override_t *key_overrides[] = {&shift_space_underscore, NULL};

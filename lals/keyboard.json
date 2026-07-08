@@ -20,7 +20,7 @@
   "i2c": { "sda_pin": "GP6", "scl_pin": "GP7" },
   "serial": { "driver": "vendor" },
   "caps_word": { "enabled": true },
-  "tapping": { "permisive_hold": true, "retro": true, "term": 200 },
+  "tapping": { "permisive_hold": true, "retro": true, "term": 145 },
   "ws2812": { "driver": "vendor", "pin": "GP10" },
   "matrix_pins": {
     "direct": [
